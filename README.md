@@ -6,7 +6,7 @@ A journey through my software development projects and continuous learning. Focu
 
 ## About Me
 
-I'm a seasoned professional with a background as a CRM Business Data Analyst, where I excelled in data analysis for BMW Aftersales and contributed to customer segmentation for SK Magic. My journey has evolved into a Salesforce Technical Lead, spearheading new initiatives and mastering Salesforce Data Cloud, Marketing Cloud, and Service Cloud development. I've led technical execution for projects with LG Electronics, Daewon Media, ChildFund Korea, The Chosunilbo, and The Hankook Ilbo.
+I'm a seasoned professional with a background as a CRM Business Data Analyst, where I excelled in data analysis for BMW Aftersales and contributed to customer segmentation for SK Magic. My journey has evolved into a Salesforce Technical Lead, spearheading new initiatives and mastering Salesforce Data Cloud, Marketing Cloud, and Service Cloud development. I've led technical execution for projects with LG Electronics, Daewon Media, Hyundai Motors India, ChildFund Korea, The Chosunilbo, and The Hankook Ilbo.
 
 My passion lies in bridging business needs with robust technical solutions, always seeking to explore new technologies and build impactful systems from the ground up.
 
