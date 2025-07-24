@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.0.6">
+  <diagram name="페이지-1" id="LJFW69V3PDPzCDCKX6a4">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AvmH2mJCKBUdP6zEg-sB-35" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="70" width="420" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="AvmH2mJCKBUdP6zEg-sB-11" value="" style="verticalLabelPosition=bottom;aspect=fixed;html=1;shape=mxgraph.salesforce.personalization2;" vertex="1" parent="1">
+          <mxGeometry x="90" y="90" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AvmH2mJCKBUdP6zEg-sB-12" value="" style="verticalLabelPosition=bottom;aspect=fixed;html=1;shape=mxgraph.salesforce.bots2;" vertex="1" parent="1">
+          <mxGeometry x="250" y="264" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AvmH2mJCKBUdP6zEg-sB-13" value="" style="verticalLabelPosition=bottom;aspect=fixed;html=1;shape=mxgraph.salesforce.data2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="410" y="90" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AvmH2mJCKBUdP6zEg-sB-14" value="" style="verticalLabelPosition=bottom;aspect=fixed;html=1;shape=mxgraph.salesforce.platform2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="90" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AvmH2mJCKBUdP6zEg-sB-20" value="1. Question" style="endArrow=classic;html=1;rounded=0;fontSize=8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="110" as="sourcePoint" />
+            <mxPoint x="250" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AvmH2mJCKBUdP6zEg-sB-25" value="2. Query Vector" style="endArrow=classic;html=1;rounded=0;fontSize=8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="110" as="sourcePoint" />
+            <mxPoint x="410" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AvmH2mJCKBUdP6zEg-sB-26" value="6. Final Answer" style="endArrow=classic;html=1;rounded=0;fontSize=8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="130" as="sourcePoint" />
+            <mxPoint x="150" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AvmH2mJCKBUdP6zEg-sB-27" value="4. Question &amp;amp; Context" style="endArrow=classic;html=1;rounded=0;align=left;fontSize=8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="164" as="sourcePoint" />
+            <mxPoint x="290" y="264" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AvmH2mJCKBUdP6zEg-sB-28" value="5. Generated Answer" style="endArrow=classic;html=1;rounded=0;align=right;fontSize=8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="264" as="sourcePoint" />
+            <mxPoint x="270" y="164" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AvmH2mJCKBUdP6zEg-sB-29" value="3. Similar FAQs" style="endArrow=classic;html=1;rounded=0;fontSize=8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="130" as="sourcePoint" />
+            <mxPoint x="310" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AvmH2mJCKBUdP6zEg-sB-30" value="application" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="140" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AvmH2mJCKBUdP6zEg-sB-31" value="vector database" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="395" y="140" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AvmH2mJCKBUdP6zEg-sB-32" value="LLM (Gemini)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="245" y="314" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AvmH2mJCKBUdP6zEg-sB-34" value="user" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="90" y="140" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
