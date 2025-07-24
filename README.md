@@ -20,7 +20,7 @@ This repository is organized into two main sections to showcase my development j
 
 This section contains various personal and professional projects I've worked on, demonstrating practical applications of my skills.
 
-* [**Mobile Wedding Invitation**](projects/wedding-invitation) - My personal mobile wedding invitation project, built using [기술 스택 예: HTML, CSS, JavaScript, etc.].
+* [**Mobile Wedding Invitation**](projects/wedding-invitation) - My personal mobile wedding invitation project, built using Nginx, FastAPI, React, PostgreSQL.
 
 ### 📚 Practices
 
