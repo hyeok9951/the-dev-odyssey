@@ -1,0 +1,11 @@
+# nginx-lb-practice/Dockerfile.nginx-lb
+FROM nginx:latest
+
+# Remove the default Nginx config that comes with the image
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Copy your custom Nginx config into the container at the standard path
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Default Nginx command to run it in the foreground
+CMD ["nginx", "-g", "daemon off;"]

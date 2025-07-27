@@ -1,0 +1,84 @@
+version: '3.8' # Docker Compose file format version
+
+services:
+  # Nginx Reverse Proxy / Load Balancer
+  nginx-lb:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx-lb
+    ports:
+      - "80:80" # Map host port 80 to container port 80
+    # MODIFIED: Use a bind mount for logs instead of a named volume
+    volumes:
+      - ./nginx_logs_data:/var/log/nginx # Mount host's ./nginx_logs_data to container's /var/log/nginx
+    depends_on: # Ensure backend services start before Nginx
+      - backend1
+      - backend2
+      - backend3
+    networks:
+      - lb_network # Custom network for inter-container communication
+    logging: # Optional: This logging driver is less relevant when logging to a bind mount
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+  # Backend Server 1 (FastAPI)
+  backend1:
+    build:
+      context: ./backend
+      args:
+        SERVER_NAME: "Server-1"
+    environment:
+      - SERVER_IP=172.19.0.2
+    networks:
+      - lb_network
+
+  # Backend Server 2 (FastAPI)
+  backend2:
+    build:
+      context: ./backend
+      args:
+        SERVER_NAME: "Server-2"
+    environment:
+      - SERVER_IP=172.19.0.3
+    networks:
+      - lb_network
+
+  # Backend Server 3 (FastAPI)
+  backend3:
+    build:
+      context: ./backend
+      args:
+        SERVER_NAME: "Server-3"
+    environment:
+      - SERVER_IP=172.19.0.4
+    networks:
+      - lb_network
+
+  # Matplotlib Dashboard Web Server (FastAPI)
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard # Custom Dockerfile for dashboard
+    ports:
+      - "8050:8050" # Expose dashboard app port to host
+    depends_on:
+      - nginx-lb # Dashboard still needs Nginx logs
+    environment:
+      - NGINX_CONTAINER_NAME=nginx-lb-practice-nginx-lb-1 # Dynamic container name
+    # MODIFIED: Use a bind mount for logs (read-only for dashboard)
+    volumes:
+      - ./nginx_logs_data:/var/log/nginx:ro # Read-only mount from host's ./nginx_logs_data
+    networks:
+      - lb_network
+    command: ["gunicorn", "-b", "0.0.0.0:8050", "dashboard_app:server"] # Ensure this CMD is correct
+
+# REMOVED: The top-level 'volumes' definition for nginx_logs
+# volumes:
+#   nginx_logs: {}
+
+# Custom network for all services
+networks:
+  lb_network:
+    driver: bridge

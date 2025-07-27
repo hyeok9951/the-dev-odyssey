@@ -1,0 +1,28 @@
+# Dockerfile.dashboard
+FROM python:3.9-slim-buster
+
+WORKDIR /app
+
+# Install necessary system packages (none specifically for GUI anymore)
+# Fix: Change repository to archive.debian.org for older Debian releases like Buster
+# Also, if no system packages are explicitly needed, apt-get install can be omitted,
+# but apt-get update is still useful for pip installs.
+RUN sed -i 's|http://deb.debian.org|http://archive.debian.org|g' /etc/apt/sources.list && \
+    sed -i 's|http://security.debian.org|http://archive.debian.org/debian-security|g' /etc/apt/sources.list && \
+    apt-get update && apt-get install -y --no-install-recommends \
+    # Add any specific system packages here if needed, otherwise leave blank or remove apt-get install
+    # For Dash, often no specific system packages are strictly required beyond what's in python:slim
+    # If you remove apt-get install, you might just do 'apt-get update && rm -rf ...'
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python libraries from requirements file
+COPY requirements_dashboard.txt .
+RUN pip install --no-cache-dir -r requirements_dashboard.txt
+
+# Copy the Dash application file
+COPY dashboard_app.py .
+
+# Command to run the Dash application with Gunicorn
+# Expose port 8050 for the dashboard app
+EXPOSE 8050
+CMD ["gunicorn", "-b", "0.0.0.0:8050", "dashboard_app:server"]
