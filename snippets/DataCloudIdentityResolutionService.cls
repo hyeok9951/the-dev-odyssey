@@ -1,5 +1,5 @@
 /**
- * @author Sanghyuk Kim
+ * @author Sanghyeok Kim
  * @description Executes Identity Resolution Ruleset in Salesforce Data Cloud using Named Credential.
  *              Designed for use in Scheduled Flows with asynchronous callout.
  */
