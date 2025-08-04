@@ -1,0 +1,17 @@
+<apex:page showHeader="false" standardStylesheets="false"></apex:page>
+
+    <script>
+        // 1. Call the CSV download page in a hidden iframe
+        const downloaderUrl = '/apex/ContactCSVDownloadController'; // Name of the VF page serving the CSV file
+        const iframe = document.createElement('iframe');
+        iframe.style.display = 'none';
+        iframe.src = downloaderUrl;
+        document.body.appendChild(iframe);
+
+        // 2. After a short delay, go back to the previous page
+        setTimeout(function () {
+            window.history.back(); // Go back to the previous page
+        }, 2000); // Delay time for download (2 seconds)
+    </script>
+
+</apex:page>

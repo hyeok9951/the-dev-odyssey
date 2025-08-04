@@ -1,0 +1,8 @@
+<apex:page standardController="Contact"
+           extensions="ContactCsvExportController"
+           contentType="text/csv;charset=UTF-8"
+           showHeader="false"
+           standardStylesheets="false"
+           action="{!initDownload}">
+    <apex:outputText value="{!csv}" />
+</apex:page>
